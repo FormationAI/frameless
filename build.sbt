@@ -1,9 +1,9 @@
 val sparkVersion = "2.2.0"
-val catsCoreVersion = "1.0.1"
-val catsEffectVersion = "0.8"
-val catsMtlVersion = "0.2.2"
-val scalatest = "3.0.3"
-val shapeless = "2.3.2"
+val catsCoreVersion = "1.1.0"
+val catsEffectVersion = "0.10.1"
+val catsMtlVersion = "0.2.3"
+val scalatest = "3.0.4"
+val shapeless = "2.3.3"
 val scalacheck = "1.13.5"
 
 lazy val root = Project("frameless", file("." + "frameless")).in(file("."))
@@ -23,7 +23,7 @@ lazy val cats = project
   .settings(warnUnusedImport: _*)
   .settings(publishSettings: _*)
   .settings(
-    addCompilerPlugin("org.spire-math" %% "kind-projector" % "0.9.4"),
+    addCompilerPlugin("org.spire-math" %% "kind-projector" % "0.9.6"),
     scalacOptions += "-Ypartial-unification"
   )
   .settings(libraryDependencies ++= Seq(
